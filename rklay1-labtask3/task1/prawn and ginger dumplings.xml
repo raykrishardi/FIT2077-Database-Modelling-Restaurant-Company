@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+    Ray Krishardi Layadi
+    rklay1 - 26445549
+    13th May 2016
+-->
+
+<recipe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="recipe.xsd">
+    <foodItem id="101" type="Entree" cooked="true">
+        <foodName>Prawn and Ginger Dumplings</foodName>
+        <foodTotalQuantity>30</foodTotalQuantity>
+        <foodServeSizeQuantity>
+            <quantity size="Standard">4</quantity>
+        </foodServeSizeQuantity>
+        <ingredients>
+            <ingredient>
+                <ingredientName>Peeled green prawns</ingredientName>
+                <ingredientAmount unit="g">250</ingredientAmount>
+            </ingredient>
+            <ingredient>
+                <ingredientName>Fresh ginger, peeled, finely grated</ingredientName>
+                <ingredientAmount unit="cm">3</ingredientAmount>
+            </ingredient>
+            <ingredient>
+                <ingredientName>Spring onions, thinly sliced</ingredientName>
+                <ingredientAmount>2</ingredientAmount>
+            </ingredient>
+            <ingredient>
+                <ingredientName>Soy sauce</ingredientName>
+                <ingredientAmount unit="ml">25</ingredientAmount>
+            </ingredient>
+            <ingredient>
+                <ingredientName>Oyster sauce</ingredientName>
+                <ingredientAmount unit="ml">25</ingredientAmount>
+            </ingredient>
+            <ingredient>
+                <ingredientName>Sesame oil</ingredientName>
+                <ingredientAmount unit="ml">5</ingredientAmount>
+            </ingredient>
+            <ingredient>
+                <ingredientName>Gow gee wrappers</ingredientName>
+                <ingredientAmount>30</ingredientAmount>
+            </ingredient>
+            <ingredient>
+                <ingredientName>Cracked black Pepper, to taste</ingredientName>
+            </ingredient>
+        </ingredients>
+        <steps>
+            <step>
+                <![CDATA[Place prawns in a food processor. 
+                Process until finely chopped. 
+                Transfer to a medium bowl. 
+                Stir in ginger, onion, soy, oyster sauce & oil.]]>
+            </step>
+            <step>
+                <![CDATA[Place 1 Gow gee wrapper on a flat surface.
+                Spoon 2 teaspoons of prawn mixture into centre of wrapper. 
+                Brush edges with cold water.
+                Press edges together to seal, then pleat. 
+                Place on a baking paper­lined baking tray. 
+                Repeat with remaining wrappers and prawn mixture, placing dumplings in a single layer on tray.]]>
+            </step>
+            <step>
+                <![CDATA[Line a large bamboo steamer with baking paper.
+                Place over a wok of simmering water.
+                Place 1/3 of the dumplings in steamer (make sure they're not touching).
+                Cover. 
+                Steam for 5 minutes or until wrappers are translucent and prawn mixture is cooked through.
+                Transfer to a large plate. Cover to keep warm. Repeat with remaining dumplings in 2 batches.]]>
+            </step>
+        </steps>
+        <webSource date="2016-05-13"
+            >http://www.taste.com.au/recipes/40251/prawn+and+ginger+dumplings?ref=collections,starters­recipes</webSource>
+    </foodItem>
+</recipe>

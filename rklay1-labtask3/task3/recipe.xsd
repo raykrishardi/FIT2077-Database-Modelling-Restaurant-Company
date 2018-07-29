@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <!-- 
+    Ray Krishardi Layadi
+    rklay1 - 26445549
+    18th May 2016
+    -->
+
+    <xs:element name="recipe">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="foodItem"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="foodItem">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="foodName"/>
+                <xs:element ref="foodTotalQuantity"/>
+                <xs:element ref="foodServeSizeQuantity"/>
+                <xs:element ref="ingredients"/>
+                <xs:element ref="steps"/>
+                <xs:choice>
+                    <xs:element ref="webSource"/>
+                    <xs:element ref="homemadeSource"/>
+                </xs:choice>
+            </xs:sequence>
+            <xs:attribute ref="id" use="required"/>
+            <xs:attribute ref="type" use="required"/>
+            <xs:attribute ref="cooked" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="foodName" type="nonEmptyString"/>
+    <xs:element name="foodTotalQuantity">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="positiveDecimal">
+                    <xs:attribute ref="unit" use="optional"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="foodServeSizeQuantity">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="quantity" minOccurs="1" maxOccurs="3"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="quantity">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="positiveDecimal">
+                    <xs:attribute ref="size" use="required"/>
+                    <xs:attribute ref="unit" use="optional"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ingredients">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="ingredient" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ingredient">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="ingredientName" minOccurs="1"/>
+                <xs:element ref="ingredientAmount" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ingredientName" type="nonEmptyString"/>
+    <xs:element name="ingredientAmount">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="positiveDecimal">
+                    <xs:attribute ref="unit" use="optional"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="steps">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="step" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="step" type="nonEmptyString"/>
+    <xs:element name="webSource">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="validURL">
+                    <xs:attribute ref="date" use="required"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="homemadeSource">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="nonEmptyString">
+                    <xs:attribute ref="date" use="required"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:attribute name="id" type="foodID"/>
+    <xs:attribute name="type" type="foodType"/>
+    <xs:attribute name="cooked" type="xs:boolean"/>
+    <xs:attribute name="size" type="foodServeSize"/>
+    <xs:attribute name="unit" type="validUnit"/>
+    <xs:attribute name="date" type="xs:date"/>
+
+
+    <xs:simpleType name="foodID">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:pattern value="\d{1,4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="foodType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Beverage"/>
+            <xs:enumeration value="Entree"/>
+            <xs:enumeration value="Main"/>
+            <xs:enumeration value="Dessert"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="nonEmptyString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="positiveDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="foodServeSize">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Small"/>
+            <xs:enumeration value="Standard"/>
+            <xs:enumeration value="Large"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="validUnit">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="g"/>
+            <xs:enumeration value="ml"/>
+            <xs:enumeration value="cm"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="validURL">
+        <xs:restriction base="xs:anyURI">
+            <xs:pattern value="https?://.+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

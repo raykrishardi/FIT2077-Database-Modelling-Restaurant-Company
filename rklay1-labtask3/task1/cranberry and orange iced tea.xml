@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+    Ray Krishardi Layadi
+    rklay1 - 26445549
+    14th May 2016
+-->
+
+<recipe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="recipe.xsd">
+    <foodItem id="100" type="Beverage" cooked="false">
+        <foodName>Cranberry and orange iced tea</foodName>
+        <foodTotalQuantity unit="ml">2000</foodTotalQuantity>
+        <foodServeSizeQuantity>
+            <quantity size="Standard" unit="ml">2000</quantity>
+        </foodServeSizeQuantity>
+        <ingredients>
+            <ingredient>
+                <ingredientName>Small orange</ingredientName>
+                <ingredientAmount>1</ingredientAmount>
+            </ingredient>
+            <ingredient>
+                <ingredientName>English breakfast tea bags</ingredientName>
+                <ingredientAmount>4</ingredientAmount>
+            </ingredient>
+            <ingredient>
+                <ingredientName>Boling water</ingredientName>
+                <ingredientAmount unit="ml">1000</ingredientAmount>
+            </ingredient>
+            <ingredient>
+                <ingredientName>Cranberry juice</ingredientName>
+                <ingredientAmount unit="ml">1000</ingredientAmount>
+            </ingredient>
+            <ingredient>
+                <ingredientName>Caster sugar</ingredientName>
+                <ingredientAmount unit="g">28.13</ingredientAmount>
+            </ingredient>
+        </ingredients>
+        <steps>
+            <step>
+                <![CDATA[Use a vegetable peeler to peel the rind from the orange. 
+                Use a small sharp knife to remove the white pith from the rind.]]>
+            </step>
+            <step>
+                <![CDATA[Place the rind and tea bags in a large heatproof jug. 
+                Pour over the water. 
+                Set aside for 20 minutes to infuse.]]>
+            </step>
+            <step>
+                <![CDATA[Remove the tea bags and rind, and discard. 
+                Add the cranberry juice and sugar to the jug, and stir to combine.]]>
+            </step>
+            <step>
+                <![CDATA[Cut half the orange flesh into small pieces and divide among 2 ice cube trays. 
+                Pour the tea mixture among the trays. 
+                Place in the freezer overnight. 
+                Cover the remaining tea mixture with plastic wrap and place in the fridge to chill.]]>
+            </step>
+            <step>
+                <![CDATA[Remove the ice cubes from the trays and place in a serving jug. 
+                Pour over the tea mixture and serve.]]>
+            </step>
+        </steps>
+        <webSource date="2016-05-14"
+            >https://www.taste.com.au/recipes/18850/cranberry+and+orange+iced+tea</webSource>
+    </foodItem>
+</recipe>

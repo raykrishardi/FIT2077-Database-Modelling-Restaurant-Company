@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+    Ray Krishardi Layadi
+    rklay1 - 26445549
+    14th May 2016
+-->
+
+<recipe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="recipe.xsd">
+    <foodItem id="103" type="Dessert" cooked="false">
+        <foodName>Apple crumble</foodName>
+        <foodTotalQuantity unit="g">1300</foodTotalQuantity>
+        <foodServeSizeQuantity>
+            <quantity size="Standard" unit="g">1300</quantity>
+        </foodServeSizeQuantity>
+        <ingredients>
+            <ingredient>
+                <ingredientName>Plain flour</ingredientName>
+                <ingredientAmount unit="g">150</ingredientAmount>
+            </ingredient>
+            <ingredient>
+                <ingredientName>Brown sugar</ingredientName>
+                <ingredientAmount unit="g">100</ingredientAmount>
+            </ingredient>
+            <ingredient>
+                <ingredientName>Chilled butter, chopped</ingredientName>
+                <ingredientAmount unit="g">100</ingredientAmount>
+            </ingredient>
+            <ingredient>
+                <ingredientName>Rolled oats</ingredientName>
+                <ingredientAmount unit="g">50</ingredientAmount>
+            </ingredient>
+            <ingredient>
+                <ingredientName>Chopped walnuts</ingredientName>
+                <ingredientAmount unit="g">60</ingredientAmount>
+            </ingredient>
+            <ingredient>
+                <ingredientName>Can baker's apple</ingredientName>
+                <ingredientAmount unit="g">800</ingredientAmount>
+            </ingredient>
+            <ingredient>
+                <ingredientName>Vanilla ice-cream, to serve</ingredientName>
+            </ingredient>
+        </ingredients>
+        <steps>
+            <step>
+                <![CDATA[Preheat oven to 180°C. 
+                Combine the flour, sugar, butter and oats in a bowl.]]>
+            </step>
+            <step>
+                <![CDATA[Use your fingertips to rub the butter into the flour mixture until the mixture resembles fine breadcrumbs. 
+                Stir in the walnuts.]]>
+            </step>
+            <step>
+                <![CDATA[Spoon the apple into a 1.5L (6-cup) capacity ovenproof dish. 
+                Scatter the walnut mixture evenly over the apples. 
+                Bake in oven for 20-25 minutes or until golden. 
+                Spoon the apple crumble into serving bowls. 
+                Serve with ice-cream.]]>
+            </step>
+        </steps>
+        <homemadeSource date="2016-05-14">Tracy Rutherford</homemadeSource>
+    </foodItem>
+</recipe>
