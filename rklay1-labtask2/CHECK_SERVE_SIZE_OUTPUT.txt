@@ -1,0 +1,128 @@
+SQL> /*
+RAY KRISHARDI LAYADI
+RKLAY1 - 26445549
+*/
+SQL> -- Insert 4 different types of food item into the fooditem table --
+SQL> insert into fooditem values(1,'Ice Tea','Green Tea','B');
+
+1 row inserted.
+
+SQL> insert into fooditem values(2,'Salad','Vegan','E');
+
+1 row inserted.
+
+SQL> insert into fooditem values(3,'Fried Rice','Spicy','M');
+
+1 row inserted.
+
+SQL> insert into fooditem values(4,'Vanilla Ice Cream','Cone','D');
+
+1 row inserted.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> -- Beverage is only available in standard serve size --
+SQL> -- Therefore, the first and third statement will produce an error --
+SQL> insert into food_serve values(1,'SM',5,5);
+
+Error starting at line : 16 in command -
+insert into food_serve values(1,'SM',5,5)
+Error report -
+SQL Error: ORA-20001: Invalid food serve size - Action failed
+ORA-06512: at "FINAL.CHECK_SERVE_SIZE_TRIGGER", line 33
+ORA-04088: error during execution of trigger 'FINAL.CHECK_SERVE_SIZE_TRIGGER'
+
+SQL> insert into food_serve values(1,'ST',10,10);
+
+1 row inserted.
+
+SQL> insert into food_serve values(1,'LG',15,15);
+
+Error starting at line : 18 in command -
+insert into food_serve values(1,'LG',15,15)
+Error report -
+SQL Error: ORA-20001: Invalid food serve size - Action failed
+ORA-06512: at "FINAL.CHECK_SERVE_SIZE_TRIGGER", line 33
+ORA-04088: error during execution of trigger 'FINAL.CHECK_SERVE_SIZE_TRIGGER'
+
+SQL> commit;
+
+Commit complete.
+
+SQL> -- Entree is only available in standard serve size --
+SQL> -- Therefore, the first and third statement will produce an error --
+SQL> insert into food_serve values(2,'SM',5,5);
+
+Error starting at line : 23 in command -
+insert into food_serve values(2,'SM',5,5)
+Error report -
+SQL Error: ORA-20001: Invalid food serve size - Action failed
+ORA-06512: at "FINAL.CHECK_SERVE_SIZE_TRIGGER", line 33
+ORA-04088: error during execution of trigger 'FINAL.CHECK_SERVE_SIZE_TRIGGER'
+
+SQL> insert into food_serve values(2,'ST',10,10);
+
+1 row inserted.
+
+SQL> insert into food_serve values(2,'LG',15,15);
+
+Error starting at line : 25 in command -
+insert into food_serve values(2,'LG',15,15)
+Error report -
+SQL Error: ORA-20001: Invalid food serve size - Action failed
+ORA-06512: at "FINAL.CHECK_SERVE_SIZE_TRIGGER", line 33
+ORA-04088: error during execution of trigger 'FINAL.CHECK_SERVE_SIZE_TRIGGER'
+
+SQL> commit;
+
+Commit complete.
+
+SQL> -- Main is available in small, standard, and large serve size --
+SQL> -- Therefore, no error will be produced --
+SQL> insert into food_serve values(3,'SM',5,5);
+
+1 row inserted.
+
+SQL> insert into food_serve values(3,'ST',10,10);
+
+1 row inserted.
+
+SQL> insert into food_serve values(3,'LG',15,15);
+
+1 row inserted.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> -- Dessert is only available in standard serve size --
+SQL> -- Therefore, the first and third statement will produce an error --
+SQL> insert into food_serve values(4,'SM',5,5);
+
+Error starting at line : 37 in command -
+insert into food_serve values(4,'SM',5,5)
+Error report -
+SQL Error: ORA-20001: Invalid food serve size - Action failed
+ORA-06512: at "FINAL.CHECK_SERVE_SIZE_TRIGGER", line 33
+ORA-04088: error during execution of trigger 'FINAL.CHECK_SERVE_SIZE_TRIGGER'
+
+SQL> insert into food_serve values(4,'ST',10,10);
+
+1 row inserted.
+
+SQL> insert into food_serve values(4,'LG',15,15);
+
+Error starting at line : 39 in command -
+insert into food_serve values(4,'LG',15,15)
+Error report -
+SQL Error: ORA-20001: Invalid food serve size - Action failed
+ORA-06512: at "FINAL.CHECK_SERVE_SIZE_TRIGGER", line 33
+ORA-04088: error during execution of trigger 'FINAL.CHECK_SERVE_SIZE_TRIGGER'
+
+SQL> commit;
+
+Commit complete.
+
+SQL> spool off

@@ -1,0 +1,37 @@
+SQL> /*
+RAY KRISHARDI LAYADI
+RKLAY1 - 26445549
+*/
+SQL> -- insert table number 1 with seating capacity of 2 seats and located indoor --
+SQL> insert into it_table values(1,2,'indoor');
+
+1 row inserted.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> -- The seating capacity of table number 1 is 2 seats --
+SQL> -- Therefore, the third insert statement will produce an error --
+SQL> insert into diner values(1, 10, 1, sysdate, null, 1);
+
+1 row inserted.
+
+SQL> insert into diner values(2, 10, 2, sysdate, null, 1);
+
+1 row inserted.
+
+SQL> insert into diner values(3, 10, 3, sysdate, null, 1);
+
+Error starting at line : 15 in command -
+insert into diner values(3, 10, 3, sysdate, null, 1)
+Error report -
+SQL Error: ORA-20001: Number of seats exceed number of available seats - Action failed
+ORA-06512: at "FINAL.CHECK_SEAT_NO_TRIGGER", line 41
+ORA-04088: error during execution of trigger 'FINAL.CHECK_SEAT_NO_TRIGGER'
+
+SQL> commit;
+
+Commit complete.
+
+SQL> spool off
